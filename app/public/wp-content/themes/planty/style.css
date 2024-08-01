@@ -10,19 +10,17 @@
     color: #000000;
 }
 
-/* Assurez-vous que les titres utilisent également la police Syne */
+/* Général */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Syne', sans-serif;
 }
-
-/* Vous pouvez ajouter d'autres éléments spécifiques si nécessaire */
 p, a, span, div {
     font-family: 'Syne', sans-serif;
 }
-
 .clr {
     padding: 0 !important;
 }
+/* Menu header */
 #site-navigation-wrap {
     right: 0 !important;
     margin: 0 !important;
@@ -42,8 +40,10 @@ p, a, span, div {
     color: white !important;
     font-size: 16px !important;
     font-weight: 400 !important; 
+    text-align: center !important;
 }
 .menu-item-22 a {
+    width: 236px !important;
     font-size: 16px !important;
     font-weight: 400 !important; 
     text-align: center !important;
@@ -51,6 +51,26 @@ p, a, span, div {
 .menu-item-22 a:hover {
     font-size: 13px !important;
     font-weight: bold !important;
+    text-align: center !important;
+}
+/* Réglages feuilles */
+#custom-image-1 {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 100px;
+}
+#custom-image-2 {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 150px;
+}
+#custom-image-3 {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 150px;
 }
 /* Style pour les champs de texte et les zones de texte des formulaires */
 .wpcf7 input[type="text"],
@@ -68,13 +88,12 @@ p, a, span, div {
     box-sizing: border-box;
     margin-bottom: 10px; 
 }
-
 /* Centrer le bouton d'envoi */
 .wpcf7 input[type="submit"] {
     display: block;
     width: 165px;
     height: 55px;
-    margin: 20px auto; /* Centrer le bouton */
+    margin: 20px auto; 
     padding: 10px 20px; 
     background-color: #E0B9B4;
     border-radius: 5px;
@@ -90,7 +109,6 @@ p, a, span, div {
     color: #ffffff !important; 
 }
 /* Style pour les champs de texte et les zones de texte Formulaire 2 */
-
 .elementor-widget-container {
     max-width: 860px !important;
     margin: 20px auto;
@@ -122,27 +140,144 @@ p, a, span, div {
     justify-content: space-between;
     padding: 0 0 20px 0;
 }
-
 .delivery {
     border-left: 1px solid white;
     padding-left: 65px;
 }
-
 /* Masquer les flèches dans les champs de type number pour WebKit (Chrome, Safari) */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 /* Masquer les flèches dans les champs de type number pour Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
 }
-/* Styles spécifiques pour le formulaire n°2 */
+/* Style spécifique pour le formulaire n°2 */
 .Form2Fields {
-    height: 71px !important; /* Ajustez la hauteur selon vos besoins */
+    height: 71px !important; /* Hauteur des champs */
 }
 
+/* Style for the Admin menu item */
+.menu-item-admin {
+    flex: 1; /* This will make the item take up the available space */
+    text-align: center; /* Center the text */
+    width: 140px !important;
+}
+
+
+/* Petits écrans (téléphones en mode portrait) */
+@media (min-width: 320px) and (max-width: 745px) {
+    
+    #site-navigation-wrap {
+        right: 0 !important;
+        margin: 0 !important;
+        width: 50%  !important;
+    }
+    .menu-item-21 a {
+        background-color: #DC9F96 !important;
+        color: white !important;
+        text-align: center !important;
+        padding: 0 !important;
+        height: 48px !important;
+        align-content: center !important;
+    }
+    .menu-item-21 a:hover{
+        background-color: #C02E44 !important;
+        color: white !important;
+        text-align: center !important;
+    }
+    .menu-item-22 a {
+        background-color: #ffffff !important;
+        text-align: center !important;
+    }
+    .menu-item-22 a:hover {
+        background-color: #ffffff !important;
+        font-weight: bold !important;
+    }
+    .mobile-menu-search {
+        visibility: hidden !important;
+        display: none !;
+        text-align: center !important;
+    }
+    #mobile-menu-search {
+        display: none !important;
+    }
+    #site-header-inner {
+        max-width: 300px !important;
+    }
+    #mobile-dropdown {
+      margin-left: 85px !important;
+      border: none !important;
+    }
+    .FormMain {
+        display: flex;
+        flex-direction: column;
+        width: 300px !important;
+        justify-content: space-between;
+        padding: 0;
+        margin: auto;
+    }
+    .products {
+        padding-left: 0;
+        width: 300px !important;
+        border: none;
+        margin: auto;
+        border-bottom: #ffffff solid 1px;
+    } 
+    .users {
+        padding-left: 0;
+        width: 300px !important;
+        border: none;
+        margin: auto;
+    } 
+    .delivery {
+        padding-left: 0;
+        width: 300px !important;
+        border: none;
+        margin: auto;
+    }
+    .elementor-15 {
+        padding-top: 10px !important;
+        padding-bottom: 0px !important;
+    }
+    .form2 {
+        padding-bottom: 0px;
+    }
+    .elementor-52 {
+        height: 60px !important;
+    }
+}
+
+/* Tablettes (écrans entre 601px et 768px) */
+@media (min-width: 745px) and (max-width: 900px) {
+    #mobile-menu-search {
+        display: none !important;
+    }
+    .elementor-widget-container {
+        max-width: 750px !important;
+        margin: 20px auto;
+        padding: 0; 
+    }
+    .delivery {
+        padding-left: 10px !important;
+    }
+    #site-header-inner {
+        max-width: 750px !important;
+    }
+    #mobile-dropdown {
+      margin-left: 530px !important;
+      border: none !important;
+    }
+    .menu-item-21 a {
+        height: 48px !important;
+        align-content: center !important;
+    }
+    .menu-item-22 a {
+        height: 48px !important;
+    }
+    
+}
 
 
