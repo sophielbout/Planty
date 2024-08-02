@@ -31,7 +31,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_custom_styles', 20 );
 
 function add_admin_menu_item($items, $args) {
     // Vérifier si l'utilisateur est connecté et a la capacité requise
-    if (is_user_logged_in() && current_user_can('manage_options')) {
+    if (is_user_logged_in() && $args->menu !== 'menu-footer') {
         $admin_item = '<li class="menu-item menu-item-admin"><a href="' . admin_url() . '">Admin</a></li>';
         
         // Diviser les éléments du menu en un tableau
